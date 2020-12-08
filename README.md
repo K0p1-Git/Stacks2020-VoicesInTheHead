@@ -1,9 +1,9 @@
 
-## [Stacks 2020 CTF] Voices in the Head - Forensic
+# [Stacks 2020 CTF] Voices in the Head - Forensic
 
 ------
 
-#### <u>Challenge Text</u>
+## <u>Challenge Text</u>
 
 <br>
 <p align="center">
@@ -13,13 +13,13 @@
 
 ------
 
-#### <u>Introduction</u>
+## <u>Introduction</u>
 
 Voices in the head is a 2000 point forensic challenge. Along with the challenge text and an audio file named `forensic-challenge-2.wav` a hint was distributed to all teams as a starting point.
 
 ------
 
-#### <u>Solution</u>
+## <u>Solution</u>
 
 The first thing we did was to opened up the wav file and check out what the content. We were immediately rewarded with a loud deafening sound of what seems like bird chirping early in the morning... 😅
 
@@ -172,7 +172,7 @@ And there we go! We solved this challenge, and got a clue to the next challenge 
 
 ------
 
-#### <u>Conclusion</u>
+## <u>Conclusion</u>
 
 Let us close this writeup with some key take away and learning point:
 
@@ -187,4 +187,4 @@ Let us close this writeup with some key take away and learning point:
 Special thanks to the member of team ***Ov3rWr1t3*** for pulling through. To those reading till this point, I hope you find this insightful and happy CTF-ing!
 
 Signing off
-**~ K0p1**
+**~K0p1**
