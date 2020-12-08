@@ -1,8 +1,6 @@
 
 # [Stacks 2020 CTF] Voices in the Head - Forensic
 
-------
-
 ## <u>Challenge Text</u>
 
 <br>
@@ -11,13 +9,9 @@
 <i>Voices in the Head - Challenge Text</i>
 </p>
 
-------
-
 ## <u>Introduction</u>
 
 Voices in the head is a 2000 point forensic challenge. Along with the challenge text and an audio file named `forensic-challenge-2.wav` a hint was distributed to all teams as a starting point.
-
-------
 
 ## <u>Solution</u>
 
@@ -170,8 +164,6 @@ But wait ... "not yet the flag" ? could this actually be the password for the ZI
 
 And there we go! We solved this challenge, and got a clue to the next challenge 🌟
 
-------
-
 ## <u>Conclusion</u>
 
 Let us close this writeup with some key take away and learning point:
@@ -186,5 +178,5 @@ Let us close this writeup with some key take away and learning point:
 
 Special thanks to the member of team ***Ov3rWr1t3*** for pulling through. To those reading till this point, I hope you find this insightful and happy CTF-ing!
 
-Signing off
+Signing off<br>
 **~K0p1**
