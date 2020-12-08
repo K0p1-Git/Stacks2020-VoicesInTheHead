@@ -15,9 +15,9 @@ Voices in the head is a 2000 point forensic challenge. Along with the challenge 
 
 ## <u>Solution</u>
 
-The first thing we did was to opened up the wav file and check out what the content. We were immediately rewarded with a loud deafening sound of what seems like bird chirping early in the morning... 😅
+The first thing we did was to open up the WAV file and check out the content. We were immediately rewarded with a loud deafening sound of what seems like birds chirping early in the morning... 😅
 
-Now based off our limited CTF experience with the forensic challenges 🤔 , usually when a audio file is involved, it usually means steganography of some sort. We pulled out the trusty `Sonic Visualiser` tool and added Spectrogram to the mix ... lo and behold ***let there be magic✨***
+Now based off our limited CTF experience with the forensic challenges, usually, when an audio file is involved, it usually means steganography of some sort. We pulled out the trusty `Sonic Visualiser` tool and added a Spectrogram to the mix ... lo and behold, *** magic ✨***
 
 
 <br>
@@ -28,7 +28,7 @@ Now based off our limited CTF experience with the forensic challenges 🤔 , usu
 <br>
 
 
-There you go, we actually found something. The text extracted from the audio reads `aHR0cDovL3d3dy5wYXN0ZWJpbi5jb20vakVUajJ1VWI=`. Notice the equal sign at the back of this string ?  Based on past experience in CTFs 🤔, that is a tell tale sign which indicates that this string is `base64 encoded`. To decode this, we simply head over to <a href="www.base64decode.org ">www.base64decode</a> and decoded our string.
+There you go, we actually found something. The text extracted from the audio reads `aHR0cDovL3d3dy5wYXN0ZWJpbi5jb20vakVUajJ1VWI=`. Notice the equal sign at the back of this string?  Based on past experiences in CTFs, this is a telltale sign which indicates that this string is `base64 encoded`. To decode this, we simply head over to <a href="www.base64decode.org ">www.base64decode</a> and decode our string.
 
 
 <br>
@@ -39,7 +39,7 @@ There you go, we actually found something. The text extracted from the audio rea
 <br>
 
 
-A Paste Bin link ? alright so let us go check it out ...
+A Paste Bin link? Alright, let us go check it out ...
 
 
 <br>
@@ -50,11 +50,10 @@ A Paste Bin link ? alright so let us go check it out ...
 <br>
 
 
-Oh what this? We have seen this before ! Once again, with our limited CTF experience, we have come across challenges is the past that uses this weird programming language / syntax, that's the language `Brain Fuck !!` 🤔 
+Oh, what this? We have seen this before! Once again, with our limited CTF experience, we have come across challenges in the past that used this weird programming language / syntax. This language is known as `Brain Fuck` 🤔 
 
 
-
-Now if you never seen this before, you can easily copy and paste the symbols to our trusty friend ***Google*** to find out what the symbols meant, that's how we came to learn about this weird programming language / syntax in the first place! 
+Now, if you never saw this before, you can easily copy and paste the symbols into our trusty friend, ***Google***, to find out what the symbols mean. That's how we came to learn about this weird programming language / syntax in the first place. 
 
 
 
@@ -69,15 +68,15 @@ So to decode this, we can use <a href="https://www.dcode.fr/brainfuck-language">
 <br>
 
 
-What?! After decoding the message we got the string `thisisnottheflag` 🤬 did the challenge just pulled one on us ? At this point we were quite lost, seeing how all of what we did lead to no where ...
+What?! After decoding the message, we got the string `thisisnottheflag`. 🤬 did the challenge just pull one on us? At this point we were quite lost, seeing how all of what we did lead to nowhere...
 
 
 
-But a light bulb 💡 moment came and we realised we have not touched the initial hint that was provided ! `Xiao wants to help. Will you let him help you?`  Who is this Xiao, and why would he want to help us ? ***Find out more on the next episode of Dragon Ball-Z*** ... (we ended up just Googling it)
+But a light bulb 💡 moment came and we realised we had not touched the initial hint that was provided! `Xiao wants to help. Will you let him help you?`  Who is this Xiao, and why would he want to help us? ***Find out more on the next episode of Dragon Ball-Z*** ... (we ended up just Googling it)
 
 
 
-Based on the hint we came across a tool called <a href="https://xiao-steganography.en.softonic.com/">Xiao Steganography</a> which seems to fit what we are doing. Another steganography tool 🤔
+Based on the hint, we came across a tool called <a href="https://xiao-steganography.en.softonic.com/">Xiao Steganography</a>, which seemed to fit what we were doing. Another steganography tool 🤔
 
 
 <br>
@@ -88,8 +87,7 @@ Based on the hint we came across a tool called <a href="https://xiao-steganograp
 <br>
 
 
-Running it against our wav file, it seems that a ZIP was detected!! We clicked to open up the zip file ... and we got an error 🤷‍♂️ what ?
-
+Running it against our WAV file, it seems that a ZIP file was detected!! We attempted to open up the zip file ... and we got an error? 🤷‍♂️ What?
 
 <br>
 <p align="center">
@@ -99,7 +97,7 @@ Running it against our wav file, it seems that a ZIP was detected!! We clicked t
 <br>
 
 
-We checked throw the zip file into <a href="https://www.x-ways.net/winhex/">WinHex</a> and discovered that the magic numbers were all messed up, is this a broken zip challenge or ?
+We tried throwing the ZIP file into <a href="https://www.x-ways.net/winhex/">WinHex</a> and discovered that the magic numbers were all messed up, is this a broken zip challenge?
 
 
 <br>
@@ -110,13 +108,13 @@ We checked throw the zip file into <a href="https://www.x-ways.net/winhex/">WinH
 <br>
 
 
-We can see the magic numbers are all off ? but not only that, it seems like the whole zip is messed up ? Maybe its not a broken ZIP challenge after all ... now what ? 🙃
+We can see the magic numbers are all off. Not only that, it seems like the whole zip is messed up. Maybe its not a broken ZIP challenge after all ... now what? 🙃
 
-Wait a minute ... could it be password protected ? ***Its at this moment another light bulb appeared💡***
+Wait a minute ... could it be password protected? ***Its at this moment another light bulb appeared💡***
 
-Earlier on when we decoded the base 64 string, where we thought we got trolled, the string `thisisnottheflag`!!
+Remember when we decoded the base 64 string? Where we thought we got trolled, We the obtained string `thisisnottheflag`.
 
-**It is not the flag, its the password for this tool !** 🤯🤯
+**It is not the flag, but it's the password for this tool !** 🤯🤯
 
 
 <br>
@@ -127,7 +125,7 @@ Earlier on when we decoded the base 64 string, where we thought we got trolled, 
 <br>
 
 
-With that we got the ZIP file, a proper ZIP file now. Clicking on it now prompts us for another password  ? what the ... 🤬
+With that, we now got have a valid ZIP file. Clicking on it now prompts us for another password. What the ... 🤬
 
 
 <br>
@@ -138,7 +136,7 @@ With that we got the ZIP file, a proper ZIP file now. Clicking on it now prompts
 <br>
 
 
-At this point we thought that it might not actually be encrypted? Like those classic broken ZIP file challenges, so we threw this new ZIP into <a href="https://www.x-ways.net/winhex/">WinHex</a> and WOAH we found the flag (or so we thought... trolled once again 😭😭😭)
+At this point, we thought that it might not actually be encrypted. Perhaps those classic broken ZIP file challenges. So we threw this new ZIP into <a href="https://www.x-ways.net/winhex/">WinHex</a> and ***WOAH*** we found the flag (or so we thought... trolled once again 😭😭😭)
 
 
 <br>
@@ -149,9 +147,9 @@ At this point we thought that it might not actually be encrypted? Like those cla
 <br>
 
 
-We submitted the "flag" `govtech-csg{Th1sisn0ty3tthefl@g}` to the challenge flag and well its fake ...
+We submitted the "flag" `govtech-csg{Th1sisn0ty3tthefl@g}` to the challenge platform, guess what? Tt's fake ...
 
-But wait ... "not yet the flag" ? could this actually be the password for the ZIP?
+But wait ... "not yet the flag"? Could this actually be the password for the ZIP?
 
 
 <br>
@@ -162,21 +160,21 @@ But wait ... "not yet the flag" ? could this actually be the password for the ZI
 <br>
 
 
-And there we go! We solved this challenge, and got a clue to the next challenge 🌟
+And there we go! We solved this challenge and got a clue to the next challenge 🌟
 
 ## <u>Conclusion</u>
 
-Let us close this writeup with some key take away and learning point:
+Let us close this writeup with some key takeaways and learning points:
 
-✅ Play lots of CTFs !! As seen through out the writeup, we are generally correct when it comes to our guesses (steganography, base64, brainfuck, etc..) by playing lots of CTFs you will gain new experience which could prove to be useful for future CTFs 
+✅ Play lots of CTFs !! As seen throughout the writeup, we are generally correct when it comes to our guesses (steganography, base64, brainfuck, etc..). By playing lots of CTFs, you will gain new experiences which could prove to be useful for future CTFs. 
 
-✅ Don't give up, throughout this challenge we faced many road blocks ***BUT we believed*** and we pulled through!
+✅ Don't give up, throughout this challenge we faced many roadblocks ***BUT, we believed*** and we pulled through!
 
-✅ Have fun, honestly we joked a lot about the flags but hey this challenge was actually pretty fun 😉
+✅ Have fun! Honestly, we joked a lot about the fake flags, but hey, this challenge was actually pretty fun 😉
 
 
 
-Special thanks to the member of team ***Ov3rWr1t3*** for pulling through. To those reading till this point, I hope you find this insightful and happy CTF-ing!
+Special thanks to the members of team ***Ov3rWr1t3*** for pulling through. To those reading till this point, I hope you find this insightful and happy CTF-ing!
 
 Signing off<br>
 **~K0p1**
